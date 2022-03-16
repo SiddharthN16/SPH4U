@@ -21,6 +21,7 @@
 \usepackage{xspace}
 
 % Formatting
+\usepackage[letterpaper]{geometry}
 \usepackage{tabularx}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -70,14 +71,12 @@
 %
 % Styles
 %
-
+\geometry{left=1.0in, right=1.0in}
 \ifdocs@nogeometry\else
   \headheight 13.6pt
   \setlength{\headsep}{10pt}
-  \textwidth 15cm
-  \textheight 24.3cm
-  \evensidemargin 6mm
-  \oddsidemargin 6mm
+  % \textwidth 16.51cm
+  \textheight 24.2cm
   \topmargin -1.1cm
   
   \RequirePackage{fancyhdr}
@@ -93,6 +92,28 @@
     \fancyfoot[c]{\thepage}
   }
 \fi
+% \ifdocs@nogeometry\else
+%   \headheight 13.6pt
+%   \setlength{\headsep}{10pt}
+%   \textwidth 15cm
+%   \textheight 24.3cm
+%   \evensidemargin 6mm
+%   \oddsidemargin 6mm
+%   \topmargin -1.1cm
+  
+%   \RequirePackage{fancyhdr}
+%   \pagestyle{fancy}
+%   \fancyhf{}
+%   \fancyfoot[c]{\thepage}
+%   \lhead{\@title}
+%   \rhead{\@author}
+
+%   \fancypagestyle{firstpage}{
+%     \fancyhf{}
+%     \rhead{\@author}
+%     \fancyfoot[c]{\thepage}
+%   }
+% \fi
 \setlength{\parskip}{1.5ex}
 \parindent=0pt
 
