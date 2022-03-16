@@ -1,5 +1,4 @@
 \documentclass{docs}
-
 \title{SPH4U: Dynamics Assignment}
 
 \begin{document}
@@ -7,74 +6,129 @@
 \textbf{\thetitle}
 
 \begin{prob}
-  Two heavy boxes, $m_{1}$ and $m_{2}$, lie stationary on different inclines, as shown.
-  A rope runs over a pulley and connects the boxes.
-  Mass 1, $m_{1}$ is 380kg. Assuming that each incline is frictionless and the system is in equilibrium, answer the
-  following:
+	Two heavy boxes, $m_{1}$ and $m_{2}$, lie stationary on different inclines, as shown.
+	A rope runs over a pulley and connects the boxes.
+	Mass 1, $m_{1}$ is 380kg. Assuming that each incline is frictionless and the system is in equilibrium, answer the
+	following:
 
-  \begin{enumerate}[(a)]
-    \item \textbf{Draw FBD(s).}\\
-          \textit{Insert Free Body Diagram Here}
-    \item \textbf{Find the magnitude of the tension in the cable.}\\
-          \begin{sol}
-            \vec{F_{net_{1x}}}            & = 0                                                              \\
-            0                             & = \vec{F_{g_{1}}} \sin 18\degree + \left\lvert F_{T}\right\rvert \\
-            0                             & = m_{1}g \sin 18 \degree + \left\lvert F_{T}\right\rvert         \\
-            0                             & = 380(-9.8) \sin 18 \degree + \left\lvert F_{T}\right\rvert      \\
-            \left\lvert F_{T}\right\rvert & = 1150.78\text{N}                                                \\
-            \left\lvert F_{T}\right\rvert & = 1200 \text{N}                                                  \\
-          \end{sol}
-          $\therefore$ The magnitude of tension in the string is 1200N.
+	\begin{enumerate}[(a)]
+		\item \textbf{Draw FBD(s).}\\
+		      \begin{minipage}[t]{.5\textwidth}
+			      \underline{\bm{$m_{1}$} FBD:}
+			      \input{q1_fbd_a.tex}
+		      \end{minipage}%
+		      \begin{minipage}[t]{.5\textwidth}
+			      \underline{\bm{$m_{2}$} FBD:}
+			      \input{q1_fbd_b.tex}
+		      \end{minipage}
 
-    \item \textbf{Calculate the mass of m2 needed to keep the system in equilibrium.}
+		\item \textbf{Find the magnitude of the tension in the cable.}\\
+		      \begin{sol}
+			      \vec{F_{net_{1x}}}            & = 0                                                              \\
+			      0                             & = \vec{F_{g_{1}}} \sin 18\degree + \left\lvert F_{T}\right\rvert \\
+			      0                             & = m_{1}g \sin 18 \degree + \left\lvert F_{T}\right\rvert         \\
+			      0                             & = 380(-9.8) \sin 18 \degree + \left\lvert F_{T}\right\rvert      \\
+			      \left\lvert F_{T}\right\rvert & = 1150.78\text{N}                                                \\
+			      \left\lvert F_{T}\right\rvert & = 1200 \text{N}                                                  \\
+		      \end{sol}
+		      $\therefore$ The magnitude of tension in the string is 1200N.
 
-          \begin{sol}
-            F_{net_{2x}} & = 0                                         \\
-            0            & = \vec{F_{g_{2}}} \sin 33 \degree + 1150.78 \\
-            m_{2}        & = \frac{-1150.78}{-9.8\sin 33 \degree}      \\
-            m_{2}        & = 215.6\text{kg}                            \\
-            m_{2}        & = 220 \text{kg}
-          \end{sol}
-          $\therefore$ The mass of the second box ($m_{2}$) is 220kg.
-  \end{enumerate}
+		\item \textbf{Calculate the mass of \bm{$m_{2}$} needed to keep the system in equilibrium.}
+
+		      \begin{sol}
+			      F_{net_{2x}} & = 0                                         \\
+			      0            & = \vec{F_{g}} \sin 33 \degree + 1150.78 \\
+			      m_{2}        & = \frac{-1150.78}{-9.8\sin 33 \degree}      \\
+			      m_{2}        & = 215.6\text{kg}                            \\
+			      m_{2}        & = 220 \text{kg}
+		      \end{sol}
+		      $\therefore$ The mass of the second box ($m_{2}$) is 220kg.
+	\end{enumerate}
 \end{prob}
 
 \begin{prob}
-  A girl applies a 140N force to a 35.0kg bale of hay at an angle of 28\textdegree above the horizontal. The force of friction acting on the bale is 55N.
-  \begin{enumerate}[(a)]
-    \item \textbf{What will be the horizontal acceleration of the bale?}
-          \begin{sol}
-            \vec{F_{net_{x}}} & = \vec{F_{a_{x}}} - \vec{F_{f}} & \vec{F_{net_{x}}} & = m\vec{a}                                 \\
-            & = 140 \cos 28\degree - 55       &\tab 66.81             & = 35\vec{a}                                \\
-            & = 66.81 \text{N[right]}         &\tab \vec{a}           & = 1.96\text{m/s\textsuperscript{2}[right]} \\
-            &                                 &\tab \vec{a}           & = 2.0\text{m/s\textsuperscript{2}[right]}
-          \end{sol}
-          $\therefore$ The horizontal acceleration is 2.0m/s\textsuperscript{2}[right]
-          \newpage
-    \item \textbf{What is the cofficient of friction between the bale and the ground?}
-          \begin{sol}
-            \vec{F_{f}} &= \mu_{f}\vec{F_{N}}\\
-            55 &= \mu_{f}(35\times 9.8)\\
-            \mu_{f} &= \frac{55}{35\times 9.8}\\
-            \mu_{f} &= 0.16
-          \end{sol}
-  \end{enumerate}
-  $\therefore$ The coefficient of friction between the bale and ground is 0.16.
+	A girl applies a 140N force to a 35.0kg bale of hay at an angle of 28\textdegree~above the horizontal. The force of friction acting on the bale is 55N.
+	\begin{enumerate}[(a)]
+		\item \textbf{What will be the horizontal acceleration of the bale?}
+		      \begin{sol}
+			      \vec{F_{net_{x}}} & = \vec{F_{a_{x}}} - \vec{F_{f}} & \vec{F_{net_{x}}} & = m\vec{a}                                 \\
+			      & = 140 \cos 28\degree - 55       &\tab 66.81             & = 35\vec{a}                                \\
+			      & = 66.81 \text{N[right]}         &\tab \vec{a}           & = 1.96\text{m/s\textsuperscript{2}[right]} \\
+			      &                                 &\tab \vec{a}           & = 2.0\text{m/s\textsuperscript{2}[right]}
+		      \end{sol}
+		      $\therefore$ The horizontal acceleration is 2.0m/s\textsuperscript{2}[right]
+		      \newpage
+		\item \textbf{What is the coefficient of friction between the bale and the ground?}
+		      \begin{sol}
+			      \vec{F_{f}} &= \mu_{f}\vec{F_{N}}\\
+			      55 &= \mu_{f}(\vec{F_{g}} - \vec{F_{a_{y}}})\\
+			      \mu_{f} &= \frac{55}{35\times 9.8-140\sin 35\degree}\\
+			      \mu_{f} &= 0.21
+		      \end{sol}
+	\end{enumerate}
+	$\therefore$ The coefficient of friction between the bale and ground is 0.21.
 \end{prob}
 
 \begin{prob}
-  A 15kg box is pushed upa 35\textdegree ramp. A force of 110N exists between the box adn the ramp.
-  \begin{enumerate}[(a)]
-    \item \textbf{Draw an FBD showing a tilted coordinate system (label positive x-direction)}
-          \textit{Draw FBD Diagram}
-    \item \textbf{What minimum force, \bm{$F$}, would be  necessary to move the box up the ramp at a constant speed?}
-          \begin{sol}
-            \vec{F_{net_{x}}} &= \vec{F_{a}} + \vec{F_{g_{x}}} + \vec{F_{f}}\\
-            0 &= \vec{F_{a}} + 15(-9.8)\sin 35\degree - 110\\
-            0 &= \vec{F_{a}} - 194.31\\
-            \vec{F_{a}} &= 194.31\text{N}
-          \end{sol}
-          $\therefore$ Since 194.31N is the force required to keep the object at rest, the minimum force for constant speed must be great than 194.31N.
-  \end{enumerate}
+	A 15kg box is pushed up a 35\textdegree~ramp. A force of 110N exists between the box and the ramp.
+	\begin{enumerate}[(a)]
+		\item \textbf{Draw an FBD showing a tilted coordinate system (label positive x-direction)}\\
+		      \begin{center}
+			      \input{q3_fbd.tex}
+		      \end{center}
+		\item \textbf{What minimum force, \bm{$F$}, would be  necessary to move the box up the ramp at a constant speed?}
+		      \begin{sol}
+			      \vec{F_{net_{x}}} &= \vec{F_{a}} + \vec{F_{g_{x}}} + \vec{F_{f}}\\
+			      0 &= \vec{F_{a}} + 15(-9.8)\sin 35\degree - 110\\
+			      0 &= \vec{F_{a}} - 194.31\\
+			      \vec{F_{a}} &= 194.31\text{N}
+		      \end{sol}
+		      $\therefore$ Since 194.31N is the force required to keep the object at rest, the minimum force for constant speed must be greater than 194.31N.
+	\end{enumerate}
 \end{prob}
+
+\begin{prob}
+	The apparatus shown in the diagram consists of a box of books connected by a string to a hanger plate loaded with masses. The mass, $m_{1}$, is for the box and books and the mass, $m_{2}$ is for the hanger with masses. The box is moving up the incline 35\textdegree~to the horizontal with constant speed. What is the coefficient of friction between the box and the incline?
+\end{prob}
+\vspace{-4mm}
+\begin{minipage}[t]{0.3\textwidth}
+	\textbf{\bm{$m_{1}$}:}\\
+	\begin{sol}
+		\vec{F_{net_{x}}} &= \vec{F_{g}}\sin35\degree + \vec{F_{T}}-\vec{F_{f}}\\
+		0&=0.45(-9.8)\sin35\degree+\vec{F_{T}}+\vec{F_{f}}\\
+		0&=-2.53+\vec{F_{T}}+\vec{F_{f}}\\
+		\vec{F_{T}}&=\vec{F_{f}}+2.53\text{N[uphill]}
+	\end{sol}
+\end{minipage}%
+\hspace{2.4cm}
+\begin{minipage}[t]{0.3\textwidth}
+	\textbf{\bm{$m_{2}$}:}\\
+	\begin{sol}
+		\vec{F_{net_{y}}} &= \vec{F_{g}}-\vec{F_{T}}\\
+		0 &= 0.35 \times 9.8 - \vec{F_{T}}\\
+		\vec{F_{T}} &= 3.43\text{N[up]}
+	\end{sol}
+\end{minipage}%
+\hspace{0.2cm}
+\begin{minipage}[t]{0.3\textwidth}
+	\textbf{Set Equations for}\\
+	\vspace{2mm}
+	\textbf{\bm{$F_{T}$} Equal:}\\
+	\begin{sol}
+		3.43 &= 2.53 + \vec{F_{f}}\\
+		{F_{f}} &= 0.9\text{N[downhill]}
+	\end{sol}
+\end{minipage}%
+\vspace{4mm}
+\begin{minipage}[t]{0.5\textwidth}
+	\textbf{Solve for Friction Coefficient:}
+	\begin{sol}
+		\vec{F_{f}} &= \mu_{f}\vec{F_{N}}\\
+		0.9 &= \mu_{f}\times0.45(9.8)\cos35\degree\\
+		\mu_{f} &= 0.25
+	\end{sol}
+\end{minipage}\\
+\\
+\\$\therefore$ The coefficient of friction between the box and incline is 0.25.
+
 \end{document}

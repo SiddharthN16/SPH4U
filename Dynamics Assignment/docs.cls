@@ -21,6 +21,7 @@
 \usepackage{xspace}
 
 % Formatting
+\usepackage{tabularx}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{float}
@@ -35,6 +36,7 @@
 \usepackage{caption}
 \usepackage{bm}
 
+\usepackage{import}
 \usepackage{enumerate}
 \usepackage[shortlabels]{enumitem} % remove space before enums
 \setlist[enumerate]{topsep=0pt}
@@ -42,6 +44,8 @@
 % Math
 \usepackage{amsfonts,amsmath,amssymb,gensymb,mathtools}
 \usepackage{physics}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
 \usepackage{cancel}
 \usepackage{systeme}
 \sysdelim.. % no curly braces
@@ -60,6 +64,7 @@
 \pgfplotsset{compat=newest}
 \usepgfplotslibrary{fillbetween}
 \usetikzlibrary{patterns}
+\usetikzlibrary{shapes}
 
 
 %
