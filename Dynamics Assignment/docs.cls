@@ -157,6 +157,11 @@
 % Macros
 %
 
+% My Commands
+\newcommand{\bd}[1]{\textbf{#1}}
+\newcommand{\ital}[1]{\textit{#1}}
+\newcommand{\sub}[1]{_{#1}}
+
 \newcommand{\thetitle}{\@title}
 
 % properly typeset ε-δ (epsilon en dash delta)
@@ -170,7 +175,7 @@
 \newcommand{\FLT}{F\ensuremath{\ell}T}
 % multiple choice (remove spacing between items)
 \newenvironment{choices}{\begin{enumerate}[(a),nosep]}{\end{enumerate}}
-\newenvironment{sol}{\[\begin{aligned}}{\end{aligned}\]}
+\newenvironment{solution}{\[\begin{aligned}}{\end{aligned}\]}
 
 % Typesetting
 \newcolumntype{C}{>{$}c<{$}} % math version of "C" column type
