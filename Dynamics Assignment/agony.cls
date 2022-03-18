@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{docs}
+\ProvidesClass{agony}
 
 %
 % Options
@@ -72,7 +72,7 @@
 % Styles
 %
 \geometry{left=1.0in, right=1.0in}
-\ifdocs@nogeometry\else
+\ifagony@nogeometry\else
   \headheight 13.6pt
   \setlength{\headsep}{10pt}
   % \textwidth 16.51cm
@@ -92,7 +92,7 @@
     \fancyfoot[c]{\thepage}
   }
 \fi
-% \ifdocs@nogeometry\else
+% \ifagony@nogeometry\else
 %   \headheight 13.6pt
 %   \setlength{\headsep}{10pt}
 %   \textwidth 15cm
@@ -176,7 +176,6 @@
 % multiple choice (remove spacing between items)
 \newenvironment{choices}{\begin{enumerate}[(a),nosep]}{\end{enumerate}}
 \newenvironment{solution}{\[\begin{aligned}}{\end{aligned}\]}
-
 % Typesetting
 \newcolumntype{C}{>{$}c<{$}} % math version of "C" column type
 \newcommand{\dint}{\displaystyle\int}
@@ -185,7 +184,6 @@
 \newcommand{\ilim}[1]{\lim_{#1\to\infty}}
 \newcommand\at[2]{\left.#1\right|_{#2}}
 \newcommand\tab[1][1cm]{\hspace*{#1}}
-
 % Sets
 \newcommand{\N}{\ensuremath{\mathbb{N}}}
 \newcommand{\Z}{\ensuremath{\mathbb{Z}}}
@@ -199,13 +197,11 @@
 \newcommand{\O}{\ensuremath{\mathcal{O}}}
 \newcommand{\Mnn}{\ensuremath{M_{n \times n}}}
 \newcommand{\sym}{\mathbin{\triangle}}
-
 % Functions
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\im}{im}
 \DeclareMathOperator{\lcm}{lcm}
 \DeclareMathOperator{\cis}{cis}
-
 % Operators
 \newcommand{\Rarr}{\Rightarrow}
 \newcommand{\Larr}{\Leftarrow}
@@ -214,7 +210,6 @@
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 \newcommand{\dyx}{\dv{y}{x}}
-
 % Linear Algebra
 \newcommand{\vui}{\mathbf{\hat{\textnormal{\bfseries\i}}}}
 \newcommand{\vuj}{\mathbf{\hat{\textnormal{\bfseries\j}}}}
@@ -248,10 +243,9 @@
     {\left\langle{#2}\ipsep{#2}\right\rangle}
     {\left\langle{#2}\ipsep{#3}\right\rangle}
   }}
-
 % Statistics
 \def\@stat{stat230}
-\ifx\docs@class\@stat
+\ifx\agony@class\@stat
   \RequirePackage{minted}
   \definecolor{bg}{rgb}{0.95,0.95,0.95}
   \usemintedstyle{tango}
@@ -272,15 +266,13 @@
   \setlist[enumerate,2]{label={(\roman*)}}
 \fi
 \def\@logic{cs245}
-\ifx\docs@class\@logic
+\ifx\agony@class\@logic
   \setlist[enumerate,1]{label={(\alph*)}}
   \setlist[enumerate,2]{label={(\roman*)}}
-
   \RequirePackage{forest}
   \RequirePackage{turnstile}
   \RequirePackage{bussproofs}
   \EnableBpAbbreviations
-
   \let\Form\@undefined % Overrides hyperref's Form environment
   \DeclareMathOperator{\Form}{Form}
   \DeclareMathOperator{\Atom}{Atom}
@@ -288,16 +280,13 @@
   \DeclareMathOperator{\Sent}{Sent}
   \renewcommand{\L}{\ensuremath{\mathcal{L}}} % Overrides \L -> Ł
   \newcommand{\Lp}{\ensuremath{\mathcal{L}^p}}
-
   \renewcommand{\S}{\ensuremath{\Sigma}\xspace} % Overrides \S -> §
-
   % Operators
   \newcommand{\timplies}{\models}
   \newcommand{\tequiv}{\mathrel{\models\!\mid}}
   \newcommand{\deduces}{\vdash}
   \newcommand{\dequiv}{\mathrel{\vdash\hspace{-0.8em}\reflectbox{$\vdash$}}}
   \newcommand{\nharr}{\nleftrightarrow}
-
   % Shorthands
   \newcommand{\0}{\ensuremath{\emptyset}\xspace}
   \newcommand{\n}{\ensuremath{\lnot}\xspace}
@@ -315,7 +304,6 @@
   \newcommand{\A}[1][\!]{\ensuremath{\forall}#1\,\xspace}
   \newcommand{\X}[1][\!]{\ensuremath{\exists}#1\,\xspace}
   \newcommand{\eq}{\ensuremath{\approx}\xspace}
-
   % Shamelessly stolen from Arthur
   \newcounter{deduction}
   \NewDocumentEnvironment{deduction}{s}
@@ -328,24 +316,23 @@
   \renewcommand{\r}[1]{\rinternal{\thededuction}{#1}}
   \renewcommand{\nr}[1]{\nrinternal{\thededuction}{#1}}
   \renewcommand{\j}[1]{&\text{(#1)}} % for justification
-
   \ExplSyntaxOn
-  \tl_new:N \l__docs_deduce_tl
+  \tl_new:N \l__agony_deduce_tl
   \NewDocumentEnvironment{deduceinternal}{+b}
    {
-    \tl_set:Nn \l__docs_deduce_tl { #1 }
-    \regex_replace_all:nnN { \<\-\> } { \c{e} } \l__docs_deduce_tl
-    \regex_replace_all:nnN { \-\> } { \c{i} } \l__docs_deduce_tl
-    \regex_replace_all:nnN { \|\-\| } { \c{tab}\c{dd} } \l__docs_deduce_tl
-    \regex_replace_all:nnN { \|\- } { \c{tab}\c{d} } \l__docs_deduce_tl
-    \regex_replace_all:nnN { \|\=\| } { \c{tab}\c{tt} } \l__docs_deduce_tl
-    \regex_replace_all:nnN { \|\= } { \c{tab}\c{t} } \l__docs_deduce_tl
-    \regex_replace_all:nnN { \! } { \c{n} } \l__docs_deduce_tl
-    \regex_replace_all:nnN { (\W)\-(\W) } { \1\c{ensuremath}\cB\{-\cE\}\2 } \l__docs_deduce_tl
-    \regex_replace_all:nnN { \band\b } { \c{a} } \l__docs_deduce_tl
-    \regex_replace_all:nnN { \bor\b } { \c{o} } \l__docs_deduce_tl
-    \regex_replace_all:nnN { \~ } { \c{eq} } \l__docs_deduce_tl
-    \tl_use:N \l__docs_deduce_tl
+    \tl_set:Nn \l__agony_deduce_tl { #1 }
+    \regex_replace_all:nnN { \<\-\> } { \c{e} } \l__agony_deduce_tl
+    \regex_replace_all:nnN { \-\> } { \c{i} } \l__agony_deduce_tl
+    \regex_replace_all:nnN { \|\-\| } { \c{tab}\c{dd} } \l__agony_deduce_tl
+    \regex_replace_all:nnN { \|\- } { \c{tab}\c{d} } \l__agony_deduce_tl
+    \regex_replace_all:nnN { \|\=\| } { \c{tab}\c{tt} } \l__agony_deduce_tl
+    \regex_replace_all:nnN { \|\= } { \c{tab}\c{t} } \l__agony_deduce_tl
+    \regex_replace_all:nnN { \! } { \c{n} } \l__agony_deduce_tl
+    \regex_replace_all:nnN { (\W)\-(\W) } { \1\c{ensuremath}\cB\{-\cE\}\2 } \l__agony_deduce_tl
+    \regex_replace_all:nnN { \band\b } { \c{a} } \l__agony_deduce_tl
+    \regex_replace_all:nnN { \bor\b } { \c{o} } \l__agony_deduce_tl
+    \regex_replace_all:nnN { \~ } { \c{eq} } \l__agony_deduce_tl
+    \tl_use:N \l__agony_deduce_tl
    }
    {}
   \newenvironment{deduce}{\refstepcounter{deduction}\setcounter{equation}{0}\deduceinternal\align}{\endalign\enddeduceinternal}
@@ -357,7 +344,6 @@
   \ExplSyntaxOff
   \newcommand{\logic}[1]{\ensuremath{\begin{deduceinternal}#1\end{deduceinternal}}}
   \newcolumntype{L}{>{\collectcell\logic}c<{\endcollectcell}}
-
   % Hoare triples
   \usepackage{stmaryrd}
   \DeclarePairedDelimiter\hoare{{\,\llparenthesis\,}}{{\,\rrparenthesis\,}}
