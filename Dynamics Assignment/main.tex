@@ -23,9 +23,10 @@
 		      \end{minipage}
 
 		\item \textbf{Find the magnitude of the tension in the cable.}\\
+		      \underline{\textbf {\bm{$m_{1}$}:}}
 		      \begin{solution}
 			      \vec{F_{net_{1x}}}            & = 0                                                              \\
-			      0                             & = \vec{F_{g}} \sin 18\degree + \left\lvert F_{T}\right\rvert \\
+			      0                             & = \vec{F_{g_{x}}} + \left\lvert F_{T}\right\rvert \\
 			      0                             & = m_{1}g \sin 18 \degree + \left\lvert F_{T}\right\rvert         \\
 			      0                             & = 380(-9.8) \sin 18 \degree + \left\lvert F_{T}\right\rvert      \\
 			      \left\lvert F_{T}\right\rvert & = 1150.78\text{N}                                                \\
@@ -37,7 +38,8 @@
 
 		      \begin{solution}
 			      F_{net_{2x}} & = 0                                         \\
-			      0            & = \vec{F_{g}} \sin 33 \degree + 1150.78 \\
+			      0            & = \vec{F_{g_{x}}} \sin 33 \degree + 1150.78 \\
+			      0 &= m_{2}g\sin33\degree+1150.78\\
 			      m_{2}        & = \frac{-1150.78}{-9.8\sin 33 \degree}      \\
 			      m_{2}        & = 215.6\text{kg}                            \\
 			      m_{2}        & = 220~\text{kg}
@@ -54,17 +56,19 @@
 		      \begin{solution}
 			      \vec{F_{net_{x}}} & = \vec{F_{a_{x}}} - \vec{F_{f}} & \vec{F_{net_{x}}} & = m\vec{a}                                 \\
 			      & = 140 \cos 28\degree - 55       &\tab 66.81             & = 35\vec{a}                                \\
-			      & = 66.81~\text{N[right]}         &\tab \vec{a}           & = 1.96\text{m/s\textsuperscript{2}[right]} \\
-			      &                                 &\tab \vec{a}           & = 2.0~\text{m/s\textsuperscript{2}[right]}
+			      & = 66.81~\text{N[forward]}         &\tab \vec{a}           & = 1.96\text{m/s\textsuperscript{2}[forward]} \\
+			      &                                 &\tab \vec{a}           & = 2.0~\text{m/s\textsuperscript{2}[forward]}
 		      \end{solution}
-		      $\therefore$ The horizontal acceleration is 2.0 m/s\textsuperscript{2}[right]
+		      $\therefore$ The horizontal acceleration of the bale is 2.0 m/s\textsuperscript{2}[forward].
 		      \newpage
 		\item \textbf{What is the coefficient of friction between the bale and the ground?}
 		      \begin{solution}
 			      \vec{F_{f}} &= \mu_{f}\vec{F_{N}}\\
 			      55 &= \mu_{f}(\vec{F_{g}} - \vec{F_{a_{y}}})\\
-			      \mu_{f} &= \frac{55}{35\times 9.8-140\sin 28\degree}\\
-			      \mu_{f} &= 0.198
+			      \mu_{f} &= \frac{55}{\vec{F_{g}} - \vec{F_{a_{y}}}}\\
+			      \mu_{f} &= \frac{55}{35(9.8)-140\sin 28\degree}\\
+			      \mu_{f} &= 0.198\\
+			      \mu_{f} &= 0.20
 		      \end{solution}
 		      $\therefore$ The coefficient of friction between the bale and ground is 0.20.
 	\end{enumerate}
@@ -84,9 +88,10 @@
 			      \vec{F_{net_{x}}} &= \vec{F_{a}} + \vec{F_{g_{x}}} + \vec{F_{f}}\\
 			      0 &= \vec{F_{a}} + 15(-9.8)\sin 35\degree - 110\\
 			      0 &= \vec{F_{a}} - 194.31\\
-			      \vec{F_{a}} &= 194.31~\text{N}
+			      \vec{F_{a}} &= 194.31~\text{N[uphill]}\\
+			      \vec{F_{a}} &= 190~\text{N[uphill]}
 		      \end{solution}
-		      $\therefore$ Since constant speed implies no acceleration ($\vec{F_{net}}=0$), the force required to move the box at constant speed must also result in 0 net force, meaning the minimum force required is 190 N.
+		      $\therefore$ Since constant speed implies no acceleration in this scenario ($\vec{F_{net}}=0$), the force required to move the box at constant speed must also result in 0 net force, meaning the minimum force required is 190 N[uphill].
 	\end{enumerate}
 \end{prob}
 
@@ -130,6 +135,8 @@
 	\begin{flalign*}
 		\vec{F_{f}} & = \mu_{f}\vec{F_{N}}                  & \\
 		0.9         & = \mu_{f}\times0.45(9.8)\cos35\degree   \\
+		\mu_{f}     & = \frac{0.9}{0.45(9.8)\cos35\degree}    \\
+		\mu_{f}     & = 0.249                                 \\
 		\mu_{f}     & = 0.25
 	\end{flalign*}
 \end{minipage}\\
