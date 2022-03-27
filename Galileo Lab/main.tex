@@ -19,14 +19,14 @@
 \captionsetup[table]{skip=0pt,singlelinecheck=off}
 \doublespacing 
 
-\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in}
+\geometry{top=0.75in, bottom=1in, left=1.0in, right=1.0in}
 \renewcommand{\headrulewidth}{0pt} 
 \renewcommand{\footrulewidth}{0pt} 
 \setlength\headsep{0.333in}
 
 
 \title{\textbf{Galileo's Ramp Lab}}
-\author{Siddharth Nema \\Partner: Andy Zhang}
+\author{\textbf{Siddharth Nema} \\Partner: Andy Zhang}
 
 \begin{document}
 \maketitle
@@ -34,19 +34,21 @@
 \section{Observations}
 
 \begin{table}[H]
-  \caption{Height and Angle Data\label{table1}}
-  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}cccc}
-    \hline
-    \textbf{Trial Number} & \textbf{Track Height (m)} & \textbf{Average Time (s)} & \textbf{Angle of Incline (\textdegree)}\\
-    \hline
-    \textbf{Height \#1}& 0.13m& 2.56s& 5.07\textdegree\\
-    \textbf{Height \#2}& 0.20m& 1.98s& 7.66\textdegree\\
-    \textbf{Height \#3}& 0.27m& 1.66s& 10.07\textdegree\\
-    \textbf{Height \#4}& 0.34m& 1.38s& 12.98\textdegree\\
-    \textbf{Height \#5}& 0.41m& 1.30s& 15.68\textdegree\\
-    \hline
-  \end{tabular*}
+	\caption{Height and Angle Data\label{table1}}
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}cccc}
+		\hline
+		\textbf{Trial Number} & \textbf{Track Height (m)} & \textbf{Average Time (s)} & \textbf{Angle of Incline (\textdegree)}\\
+		\hline
+		\textbf{Height \#1}& 0.13m& 2.56s& 5.07\textdegree\\
+		\textbf{Height \#2}& 0.20m& 1.98s& 7.66\textdegree\\
+		\textbf{Height \#3}& 0.27m& 1.66s& 10.07\textdegree\\
+		\textbf{Height \#4}& 0.34m& 1.38s& 12.98\textdegree\\
+		\textbf{Height \#5}& 0.41m& 1.30s& 15.68\textdegree\\
+		\hline
+	\end{tabular*}
 \end{table}
+\vspace{-8mm}
+\textit{$\star$ All values rounded to 2 significant digits}\\
 \vspace{-4mm}
 \textbf{Length of Ramp (\bm{$\Delta d$})} = 1.50 metres
 
@@ -55,88 +57,90 @@
 \textbf{1. Calculating Acceleration of the Ball:} \\
 \underline{Sample Calculation for Height \#1:}\\
 \[
-  \begin{aligned}
-    \vec{a} & =\frac{2\Delta d}{t^2}                       \\
-    \vec{a} & =\frac{2(1.50)}{2.56^2}                      \\
-    \vec{a} & =0.46\text{m/s\textsuperscript{2}[downhill]}
-  \end{aligned}
+	\begin{aligned}
+		\vec{a} & =\frac{2\Delta d}{t^2}                        \\
+		\vec{a} & =\frac{2(1.50)}{2.56^2}                       \\
+		\vec{a} & =0.46~\text{m/s\textsuperscript{2}[downhill]}
+	\end{aligned}
 \]
 \begin{table}[H]
-  \caption{Angles and Acceleration Data\label{table2}}
-  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}cccc}
-    \hline
-    \textbf{Height (m)} & \textbf{Angle (\textdegree)} & \textbf{Sin \bm{$\theta$}} & \textbf{Acceleration (m/s\textsuperscript{2})} \\
-    \hline
-    \textbf{Height \#1:} 0.13m& 5.07\textdegree& 0.09& 0.46m/s\textsuperscript{2}\\
-    \textbf{Height \#2:} 0.20m& 7.66\textdegree& 0.13& 0.77m/s\textsuperscript{2}\\
-    \textbf{Height \#3:} 0.27m& 10.07\textdegree& 0.18& 1.09m/s\textsuperscript{2}\\
-    \textbf{Height \#4:} 0.34m& 12.98\textdegree& 0.23& 1.58m/s\textsuperscript{2}\\
-    \textbf{Height \#5:} 0.41m& 15.68\textdegree& 0.27& 1.78m/s\textsuperscript{2}\\
-    \hline
-  \end{tabular*}
+	\caption{Angles and Acceleration Data\label{table2}}
+	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}cccc}
+		\hline
+		\textbf{\hspace{4mm} Height (m)} & \textbf{Angle (\textdegree)} & \textbf{Sin \bm{$\theta$}} & \textbf{Acceleration (m/s\textsuperscript{2})} \\
+		\hline
+		\textbf{Height \#1:} 0.13m& 5.07\textdegree& 0.09& 0.46m/s\textsuperscript{2}\\
+		\textbf{Height \#2:} 0.20m& 7.66\textdegree& 0.13& 0.77m/s\textsuperscript{2}\\
+		\textbf{Height \#3:} 0.27m& 10.07\textdegree& 0.18& 1.09m/s\textsuperscript{2}\\
+		\textbf{Height \#4:} 0.34m& 12.98\textdegree& 0.23& 1.58m/s\textsuperscript{2}\\
+		\textbf{Height \#5:} 0.41m& 15.68\textdegree& 0.27& 1.78m/s\textsuperscript{2}\\
+		\hline
+	\end{tabular*}
 \end{table}
+\vspace{-8mm}
+\textit{$\star$ All values rounded to 2 significant digits}
 \newpage
 
 \noindent
-\textbf{2. Acceleration Vs. Sin \bm{$\theta$} Graph Without Trendline:}
+\textbf{2. Acceleration Vs. Sin \bm{$\theta$} Graph Without Line of Best Fit:}
 
 \begin{figure}[H]
-  \caption{Acceleration Vs. Sin $\theta$\label{figure1}}
-  \vspace{-4mm}
-  \begin{tikzpicture}
-    \begin{axis}[
-        xmin=0, xmax=0.3,
-        ymin=0, ymax=2,
-        xtick distance = 0.05,
-        ytick distance = 0.2,
-        xticklabel style={
-            /pgf/number format/precision=3,
-            /pgf/number format/fixed},
-        grid = both,
-        minor tick num = 1,
-        major grid style = {lightgray},
-        minor grid style = {lightgray!25},
-        width = \textwidth,
-        height = 0.5\textwidth,
-        xlabel = {Sin $\theta$},
-        ylabel = {Acceleration (m/s\textsuperscript{2})},
-      ]
+	\caption{Acceleration Vs. Sin $\theta$\label{figure1}}
+	\vspace{-4mm}
+	\begin{tikzpicture}
+		\begin{axis}[
+				xmin=0, xmax=0.3,
+				ymin=0, ymax=2,
+				xtick distance = 0.05,
+				ytick distance = 0.2,
+				xticklabel style={
+						/pgf/number format/precision=3,
+						/pgf/number format/fixed},
+				grid = both,
+				minor tick num = 1,
+				major grid style = {lightgray},
+				minor grid style = {lightgray!25},
+				width = \textwidth,
+				height = 0.5\textwidth,
+				xlabel = {Sin $\theta$},
+				ylabel = {Acceleration (m/s\textsuperscript{2})},
+			]
 
-      \addplot[red, only marks] file[skip first] {result.dat};
+			\addplot[red, only marks] file[skip first] {result.dat};
 
-    \end{axis}
-  \end{tikzpicture}
+		\end{axis}
+	\end{tikzpicture}
 \end{figure}
 
 \noindent
-\textbf{3. Acceleration Vs. Sin \bm{$\theta$} Graph With Trendline:}
+\textbf{3. Acceleration Vs. Sin \bm{$\theta$} Graph With Line of Best Fit:}
 \begin{figure}[H]
-  \caption{Acceleration Vs. Sin $\theta$\label{figure2}}
-  \vspace{-4mm}
-  \begin{tikzpicture}
-    \begin{axis}[
-        xmin=0, xmax=0.3,
-        ymin=0, ymax=2,
-        xtick distance = 0.05,
-        ytick distance = 0.2,
-        xticklabel style={
-            /pgf/number format/precision=3,
-            /pgf/number format/fixed},
-        grid = both,
-        minor tick num = 1,
-        major grid style = {lightgray},
-        minor grid style = {lightgray!25},
-        width = \textwidth,
-        height = 0.5\textwidth,
-        xlabel = {Sin $\theta$},
-        ylabel = {Acceleration (m/s\textsuperscript{2})},
-      ]
+	\caption{Acceleration Vs. Sin $\theta$\label{figure2}}
+	\vspace{-4mm}
+	\begin{tikzpicture}
+		\begin{axis}[
+				xmin=0, xmax=0.3,
+				ymin=0, ymax=2,
+				xtick distance = 0.05,
+				ytick distance = 0.2,
+				xticklabel style={
+						/pgf/number format/precision=3,
+						/pgf/number format/fixed},
+				grid = both,
+				minor tick num = 1,
+				major grid style = {lightgray},
+				minor grid style = {lightgray!25},
+				width = \textwidth,
+				height = 0.5\textwidth,
+				xlabel = {Sin $\theta$},
+				ylabel = {Acceleration (m/s\textsuperscript{2})},
+			]
 
-      \addplot[red, only marks] file[skip first] {result.dat};
-      \addplot [color=blue, domain=0.088:0.3, mark=none smooth, thick] {7.5727*x-0.2135};
+			\addplot[red, only marks] file[skip first] {result.dat};
+			\addplot [color=blue, domain=0:0.3, mark=none smooth, thick] {7.5727*x-0.2135};
 
-    \end{axis}
-  \end{tikzpicture}
+		\end{axis}
+	\end{tikzpicture}
 \end{figure}
 \vspace{-4mm}
 
@@ -144,7 +148,7 @@
 \textbf{\tab a) Relation between Acceleration and Sin \bm{$\theta$}:}
 
 \noindent
-\tab There is a linear relationship between acceleration and sin $\theta$, which represents the \tab acceleration due to gravity.
+\tab There is a linear relationship between acceleration and sin $\theta$, where acceleration is \tab directly proportional to sin $\theta$ ($\vec{a}\propto \sin\theta$), and the slope of the line of best fit should \tab represent the acceleration due to gravity.
 
 \newpage
 
@@ -152,61 +156,59 @@
 \textbf{\tab b) Calculating Slope of Trendline:}
 \vspace{-4mm}
 \[
-  \begin{aligned}
-    m & = \frac{y_{2}-y_{1}}{x_{2}-x_{1}} \\
-    m & =\frac{1.09-0.46}{0.175-0.088}    \\
-    m & =7.24
-  \end{aligned}
+	\begin{aligned}
+		m & = \frac{y_{2}-y_{1}}{x_{2}-x_{1}} \\
+		m & =\frac{1.09-0.46}{0.175-0.088}    \\
+		m & =7.24
+	\end{aligned}
 \]
 \noindent
 \tab $\therefore$ The slope of the trendline is 7.24.
 
 \vspace{4mm}
 \noindent
-\textbf{\tab c) Equation of the Line:}
+\textbf{\tab c) Equation of the Line:}\\
+\noindent
+\tab \underline{\textit{Let \bm{$x$} represent \boldmath{$\sin \theta$}}}\\
+\tab Equation based on Excel trendline: \bm{$y=7.5727x - 0.2135$}
 
 \noindent
-\tab Equation based on Excel trendline: \bm{$y=7.5727x - 0.2135$} \textsuperscript{$\star$}
-
-\noindent
-\tab Equation from calculations: \bm{$y = 7.24x-0.177$} \textsuperscript{$\star$} \\
+\tab Equation from calculations: \bm{$y = 7.24x-0.177$}\\
 \vspace{-4mm}
-\noindent
-\tab \textit{$\star$ Where \bm{$x$} truly represents \bm{$\sin x$}}
 
-\vspace{8mm}
 \noindent
 \textbf{\tab d) Acceleration of the Ball if \bm{$\theta=90$}\textdegree:}
 
 \noindent
-\tab Calculated using equation from calculations:
+\tab Calculated using equation provided by Excel:
 \vspace{-4mm}
 \[
-  \begin{aligned}
-    y & =7.24 \sin x-0.177          \\
-    y & =7.24 \sin 90\degree -0.177 \\
-    y & =7.24 - 0.177               \\
-    y & =7.06
-  \end{aligned}
+	\begin{aligned}
+		y & =7.5727\sin \theta - 0.2135         \\
+		y & =7.5727\sin 90\degree -0.2135       \\
+		y & =7.5727 - 0.2135                    \\
+		y & =7.36~\text{m/s\textsuperscript{2}}
+	\end{aligned}
 \]
 \vspace{-8mm}
 \noindent
-\tab $\therefore$ The calculated acceleration of the ball at 90\textdegree\ would be 7.06 m/s\textsuperscript{2}.
+\tab $\therefore$ The calculated acceleration of the ball at 90\textdegree\ would be 7.36 m/s\textsuperscript{2}[downhill].
 
 \vspace{12mm}
 \noindent
-\textbf{\tab e) Calculating the Percentage Error:}
-
+\textbf{\tab e) Calculating the Percentage Error:}\\
+\noindent
+\tab $ \tab \delta = \text{Percentage Error} \tab \mathcal{V}_{E} = \text{Expected Value} \tab \mathcal{V}_{M} = \text{Measured Value}$
 \[
-  \begin{aligned}
-    \delta & = \left\lvert \frac{ \mathcal{V}_{A} - \mathcal{V}_{E} }{\mathcal{V}_{E}} \right\rvert \centerdot 100\% \\
-    \delta & = \left\lvert \frac{9.8-7.06}{7.06}\right\rvert \centerdot 100\%                                        \\
-    \delta & = 39\%
-  \end{aligned}
+	\begin{aligned}
+		\delta & = \left\lvert \frac{ \mathcal{V}_{E} - \mathcal{V}_{M} }{\mathcal{V}_{E}} \right\rvert \centerdot 100\% \\
+		\delta & = \left\lvert \frac{9.81-7.36}{9.81}\right\rvert \centerdot 100\%                                       \\
+		\delta & = 25\%
+	\end{aligned}
 \]
 \vspace{-12mm}
 \noindent
-\tab $\therefore$ The calculated percentage error is 39\%.
+\tab $\therefore$ The calculated percentage error is 25\%.
 
 \newpage
 
