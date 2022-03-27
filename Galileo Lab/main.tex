@@ -5,8 +5,10 @@
 \usepackage{amsmath}
 \usepackage{gensymb}
 \usepackage{amssymb}
+\usepackage{xcolor}
 \usepackage{rotating}
 \usepackage{fancyhdr}
+\usepackage{hyperref}
 \usepackage{setspace}
 \usepackage{mathtools}
 \usepackage{float}
@@ -15,6 +17,11 @@
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 \pgfplotsset{compat=newest}
+
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 
 \captionsetup[table]{skip=0pt,singlelinecheck=off}
 \doublespacing 
@@ -26,7 +33,7 @@
 
 
 \title{\textbf{Galileo's Ramp Lab}}
-\author{\textbf{Siddharth Nema} \\Partner: Andy Zhang}
+\author{\textbf{Siddharth Nema} \\Partner: Andy Zhang \\SPH4U0 | Ms.Ally}
 
 \begin{document}
 \maketitle
@@ -34,23 +41,22 @@
 \section{Observations}
 
 \begin{table}[H]
-	\caption{Height and Angle Data\label{table1}}
+	\caption{Height and Angle Data\textsuperscript{$\star$}\label{table1}}
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}cccc}
 		\hline
 		\textbf{Trial Number} & \textbf{Track Height (m)} & \textbf{Average Time (s)} & \textbf{Angle of Incline (\textdegree)}\\
 		\hline
-		\textbf{Height \#1}& 0.13m& 2.56s& 5.07\textdegree\\
-		\textbf{Height \#2}& 0.20m& 1.98s& 7.66\textdegree\\
-		\textbf{Height \#3}& 0.27m& 1.66s& 10.07\textdegree\\
-		\textbf{Height \#4}& 0.34m& 1.38s& 12.98\textdegree\\
-		\textbf{Height \#5}& 0.41m& 1.30s& 15.68\textdegree\\
+		\textbf{Height \#1}& 0.132m& 2.56s& 5.07\textdegree\\
+		\textbf{Height \#2}& 0.200m& 1.98s& 7.66\textdegree\\
+		\textbf{Height \#3}& 0.269m& 1.66s& 10.1\textdegree\\
+		\textbf{Height \#4}& 0.334m& 1.38s& 13.0\textdegree\\
+		\textbf{Height \#5}& 0.406m& 1.30s& 15.7\textdegree\\
 		\hline
 	\end{tabular*}
 \end{table}
 \vspace{-8mm}
-\textit{$\star$ All values rounded to 2 significant digits}\\
-\vspace{-4mm}
-\textbf{Length of Ramp (\bm{$\Delta d$})} = 1.50 metres
+\textit{$\star$ All values rounded to 3 significant digits}
+\textbf{\\Length of Ramp (\bm{$\Delta d$})} = 1.50 metres
 
 \section{Analysis}
 
@@ -58,27 +64,27 @@
 \underline{Sample Calculation for Height \#1:}\\
 \[
 	\begin{aligned}
-		\vec{a} & =\frac{2\Delta d}{t^2}                        \\
-		\vec{a} & =\frac{2(1.50)}{2.56^2}                       \\
-		\vec{a} & =0.46~\text{m/s\textsuperscript{2}[downhill]}
+		\vec{a} & =\frac{2\Delta d}{t^2}                         \\
+		\vec{a} & =\frac{2(1.50)}{2.56^2}                        \\
+		\vec{a} & =0.458~\text{m/s\textsuperscript{2}[downhill]}
 	\end{aligned}
 \]
 \begin{table}[H]
-	\caption{Angles and Acceleration Data\label{table2}}
+	\caption{Angles and Acceleration Data\textsuperscript{$\star$}\label{table2}}
 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}cccc}
 		\hline
 		\textbf{\hspace{4mm} Height (m)} & \textbf{Angle (\textdegree)} & \textbf{Sin \bm{$\theta$}} & \textbf{Acceleration (m/s\textsuperscript{2})} \\
 		\hline
-		\textbf{Height \#1:} 0.13m& 5.07\textdegree& 0.09& 0.46m/s\textsuperscript{2}\\
-		\textbf{Height \#2:} 0.20m& 7.66\textdegree& 0.13& 0.77m/s\textsuperscript{2}\\
-		\textbf{Height \#3:} 0.27m& 10.07\textdegree& 0.18& 1.09m/s\textsuperscript{2}\\
-		\textbf{Height \#4:} 0.34m& 12.98\textdegree& 0.23& 1.58m/s\textsuperscript{2}\\
-		\textbf{Height \#5:} 0.41m& 15.68\textdegree& 0.27& 1.78m/s\textsuperscript{2}\\
+		\textbf{Height \#1:} 0.132m& 5.07\textdegree& 0.0880& 0.458m/s\textsuperscript{2}\\
+		\textbf{Height \#2:} 0.200m& 7.66\textdegree& 0.133& 0.765m/s\textsuperscript{2}\\
+		\textbf{Height \#3:} 0.269m& 10.1\textdegree& 0.175& 1.09m/s\textsuperscript{2}\\
+		\textbf{Height \#4:} 0.334m& 13.0\textdegree& 0.225& 1.58m/s\textsuperscript{2}\\
+		\textbf{Height \#5:} 0.406m& 15.7\textdegree& 0.271& 1.78m/s\textsuperscript{2}\\
 		\hline
 	\end{tabular*}
 \end{table}
 \vspace{-8mm}
-\textit{$\star$ All values rounded to 2 significant digits}
+\hspace{-6mm}\textit{$\star$ All values rounded to 3 significant digits}
 \newpage
 
 \noindent
@@ -137,7 +143,7 @@
 			]
 
 			\addplot[red, only marks] file[skip first] {result.dat};
-			\addplot [color=blue, domain=0:0.3, mark=none smooth, thick] {7.5727*x-0.2135};
+			\addplot [color=blue, domain=0:0.3, mark=none smooth, thick] {7.5563*x-0.2134};
 
 		\end{axis}
 	\end{tikzpicture}
@@ -148,32 +154,35 @@
 \textbf{\tab a) Relation between Acceleration and Sin \bm{$\theta$}:}
 
 \noindent
-\tab There is a linear relationship between acceleration and sin $\theta$, where acceleration is \tab directly proportional to sin $\theta$ ($\vec{a}\propto \sin\theta$), and the slope of the line of best fit should \tab represent the acceleration due to gravity.
+\tab There is a linear relationship between acceleration and sin $\theta$, where acceleration is \tab directly proportional to sin $\theta$ ($\vec{a}\propto \sin\theta$), and the slope of best fit line should \tab represent the acceleration due to gravity.
 
 \newpage
 
 \noindent
-\textbf{\tab b) Calculating Slope of Trendline:}
+\textbf{\tab b) Calculating Slope of the Best Fit Line:}\\
+\noindent
+\tab Two points on the best fit line are: $(0.24,1.6)$ and $(0.11,0.60)$
 \vspace{-4mm}
 \[
 	\begin{aligned}
-		m & = \frac{y_{2}-y_{1}}{x_{2}-x_{1}} \\
-		m & =\frac{1.09-0.46}{0.175-0.088}    \\
-		m & =7.24
+		m & = \frac{y_{2}-y_{1}}{x_{2}-x_{1}}   \\
+		m & =\frac{1.6-0.60}{0.24-0.11}         \\
+		m & =7.69 \text{m/s\textsuperscript{2}}
 	\end{aligned}
+	\vspace{-4mm}
 \]
 \noindent
-\tab $\therefore$ The slope of the trendline is 7.24.
+\tab $\therefore$ The calculated slope of the best fit line is 7.69 m/s\textsuperscript{2}.
 
 \vspace{4mm}
 \noindent
 \textbf{\tab c) Equation of the Line:}\\
 \noindent
 \tab \underline{\textit{Let \bm{$x$} represent \boldmath{$\sin \theta$}}}\\
-\tab Equation based on Excel trendline: \bm{$y=7.5727x - 0.2135$}
+\tab Equation based on Excel trendline: \bm{$y=7.5563x - 0.2134$}
 
 \noindent
-\tab Equation from calculations: \bm{$y = 7.24x-0.177$}\\
+\tab Equation from calculations: \bm{$y = 7.69x-0.246$}\\
 \vspace{-4mm}
 
 \noindent
@@ -184,29 +193,29 @@
 \vspace{-4mm}
 \[
 	\begin{aligned}
-		y & =7.5727\sin \theta - 0.2135         \\
-		y & =7.5727\sin 90\degree -0.2135       \\
-		y & =7.5727 - 0.2135                    \\
-		y & =7.36~\text{m/s\textsuperscript{2}}
+		y & =7.5563\sin \theta - 0.2134         \\
+		y & =7.5563\sin 90\degree - 0.2134      \\
+		y & =7.5563(1) - 0.2134                 \\
+		y & =7.34~\text{m/s\textsuperscript{2}}
 	\end{aligned}
+	\vspace{-4mm}
 \]
-\vspace{-8mm}
 \noindent
-\tab $\therefore$ The calculated acceleration of the ball at 90\textdegree\ would be 7.36 m/s\textsuperscript{2}[downhill].
+\tab$\therefore$ The calculated acceleration of the ball at 90\textdegree\ would be 7.34 m/s\textsuperscript{2}[downhill].
 
-\vspace{12mm}
+\vspace{4mm}
 \noindent
 \textbf{\tab e) Calculating the Percentage Error:}\\
 \noindent
-\tab $ \tab \delta = \text{Percentage Error} \tab \mathcal{V}_{E} = \text{Expected Value} \tab \mathcal{V}_{M} = \text{Measured Value}$
+\tab $ \tab \delta = \text{Percentage Error} \tab \mathcal{V}_{A} = \text{Accepted Value} \tab \mathcal{V}_{M} = \text{Measured Value}$
 \[
 	\begin{aligned}
-		\delta & = \left\lvert \frac{ \mathcal{V}_{E} - \mathcal{V}_{M} }{\mathcal{V}_{E}} \right\rvert \centerdot 100\% \\
-		\delta & = \left\lvert \frac{9.81-7.36}{9.81}\right\rvert \centerdot 100\%                                       \\
+		\delta & = \left\lvert \frac{ \mathcal{V}_{A} - \mathcal{V}_{M} }{\mathcal{V}_{A}} \right\rvert \centerdot 100\% \\
+		\delta & = \left\lvert \frac{9.81-7.34}{9.81}\right\rvert \centerdot 100\%                                       \\
 		\delta & = 25\%
 	\end{aligned}
+	\vspace{-4mm}
 \]
-\vspace{-12mm}
 \noindent
 \tab $\therefore$ The calculated percentage error is 25\%.
 
@@ -216,12 +225,15 @@
 \textbf{\tab f) Discussing Two (2) Sources of Error:}
 
 \noindent
-\tab \textbf{1)} Since the ball is travelling on a surface, there are other forces acting on it, which \tab slow down the ball’s motion such as friction between the ball and surface as well as \tab air resistance. These two forces oppose the ball’s motion, preventing it from reaching \tab the target 9.8 m/s\textsuperscript{2} acceleration. The material of the bouncy ball was rubber and was \tab against semi rough plastic, which would result in a high force of friction that would \tab affect the ball as “rolling friction” which we cannot account for currently.
-
-\vspace{4mm}
-
+\begin{flushleft}
+	\tab \textbf{1)} With the ball rolling on a surface, there are other forces acting on the ball during \tab its motion besides the gravitational force. The most notable forces acting on the ball \tab were kinetic friction and air resistance. Since kinetic friction opposes the motion of \tab the ball, it also reduced the ball’s acceleration. The effects of kinetic friction were \tab most notable with smaller values of  $\theta$ as the force of friction increases with smaller \tab angles. Meanwhile, air resistance increased with larger angles since the ball has more \tab speed. Additionally, the coefficient of friction between the ball (rubber) and ramp \tab (plastic), is generally higher than for example metal on wood. For these reasons, the \tab measured acceleration was lower than the accepted value of 9.81m/s\textsuperscript{2} since friction \tab opposed the ball’s motion. This error could be regarded as a systemic error because \tab the rubber ball and plastic ramp were the only available resources to use.
+\end{flushleft}
+\vspace{-4mm}
 \noindent
-\tab \textbf{2)} In addition, due to the poor design of the ramp we used, the rubber ball kept \tab hitting the sides of the ramp as it rolled down, which would decrease its speed and \tab have external forces act upon it. This would increase in time and therefore, introduce \tab a higher \% error in our calculations.
+\begin{flushleft}
+	\tab \textbf{2)} Our experiment also had random errors which caused variations in our data. The \tab most common random error that occurred was the ball not rolling down the ramp in \tab a straight line. Often the ball would hit the sides of the ramp, which first changes \tab the direction of the balls motion often and caused the ball to lose energy through \tab its collision with the ramp walls. The collisions caused a decrease in acceleration \tab because the ball lost kinetic energy, and its change in directions resulted in an \tab inaccurate time to reach the bottom of the ramp. Potential reasons for the ball’s \tab behaviour could include a faulty release and slight bumps/grooves in the plastic \tab ramp. However, unlike the first error source, we were able to somewhat minimize the \tab impact of the random errors by repeating trials, allowing us to average out results \tab and reduce the effects of the random error.
+\end{flushleft}
+
 
 \vspace{8mm}
 \noindent
@@ -231,12 +243,60 @@
 \tab \textbf{a) Modifying The Experiment to Test Galileo's Conclusion:}
 
 \noindent
-\tab The experiment could be modified by using multiple balls of varying masses with the \tab same five angles and creating acceleration vs sin $\theta$ graphs for all of them. The graphs \tab should roughly all look the same or only have slight differences due to experimental \tab errors.
+\begin{flushleft}
+	\tab To test Galileo’s conclusion that the acceleration of balls down a ramp being \tab independent of mass, the experiment can be modified by using balls of varying masses \tab using the same five angles. However, despite these balls having different masses, they \tab should share other physical properties such as similar material and surface area. By \tab keeping those properties, the same, the effects of forces like friction on acceleration \tab are minimized when analysing the data for different balls. By keeping the \tab material, the same, all the balls should share a similar coefficient of friction and by \tab keeping the surface area the same, the balls should all make a similar amount of \tab contact with the ramp itself. These factors help to focus on testing Galileo’s \tab conclusion, as there are more controlled variables.
+
+	\vspace{4mm}
+	\tab When graphing acceleration vs $\sin\theta$ graphs for the balls, the graphs should look \tab similar in terms of their slope and overall equation. Due to Galileo’s conclusion, the \tab ball’s different masses should not affect their accelerations, therefore the equations of \tab the line of best fit should not differ either, apart from minor random errors.
+
+\end{flushleft}
+
 
 \noindent
 \tab \textbf{b) Explaining Why the Feather and Bowling Ball Result does not Contradict \tab Galileo's Result:}
 
 \noindent
-\tab The result does not contradict Galileo’s conclusion because when the objects are \tab dropped, other forces act on them; primarily air resistance, which is not independent \tab of mass. As a result the feather experiences more air resistance than the bowling ball. \tab If the two objects were placed in a complete vacuum, both objects would reach the \tab ground at the same time, as gravity is the only force acting on the objects, displaying \tab that acceleration is independent of mass.
+\begin{flushleft}
+	\tab The result does not contradict Galileo’s result because his conclusion proved that all \tab falling objects \textbf{accelerate} towards Earth at the same rate, \textbf{in the absence of other \tab forces}. In the example of dropping a feather and a bowling ball, the two objects have \tab other forces acting on them, where air resistance is most notable. Although the \tab bowling ball likely receives more air resistance than the feather due to its larger \tab surface area, the feather will reach terminal velocity much quicker than the bowling \tab ball due to its lower mass. As a result the bowling ball will not reach terminal \tab velocity and will hit the ground before the feather.
+
+	\vspace{4mm}
+	\tab However, if both objects were placed inside a vacuum chamber such as NASA’s Space \tab Power Facility (SPF), air resistance becomes negligible. As a result, the feather and \tab bowling ball would reach the ground at the same time if dropped from the same \tab height and speed/at rest, because the only force acting on the objects is the \tab acceleration due to gravity. To better demonstrate this concept, the BBC made a \tab \href{https://youtu.be/E43-CfukEgs?t=172}{\textcolor{blue}{\underline{video}}} showcasing the experiment in a vacuum chamber, which also shows the feather \tab and bowling ball landing at the same time.
+
+	\vspace{4mm}
+	\tab Galileo’s conclusion is not contradicted as the acceleration due to gravity is \tab independent to mass.
+
+\end{flushleft}
+
+% \section{Raw Data}
+
+% \begin{table}[H]
+% 	\caption{Height and Angle Raw Data\label{table3}}
+% 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}cccc}
+% 		\hline
+% 		\textbf{Trial Number} & \textbf{Track Height (m)} & \textbf{Average Time (s)} & \textbf{Angle of Incline (\textdegree)}\\
+% 		\hline
+% 		\textbf{Height \#1}& 0.1315m& 2.556s& 5.067\textdegree\\
+% 		\textbf{Height \#2}& 0.2000m& 1.983s& 7.662\textdegree\\
+% 		\textbf{Height \#3}& 0.2685m& 1.661s& 10.07\textdegree\\
+% 		\textbf{Height \#4}& 0.3337m& 1.378s& 12.98\textdegree\\
+% 		\textbf{Height \#5}& 0.4055m& 1.300s& 15.68\textdegree\\
+% 		\hline
+% 	\end{tabular*}
+% \end{table}
+
+% \begin{table}[H]
+% 	\caption{Angles and Acceleration Raw Data\label{table4}}
+% 	\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}cccc}
+% 		\hline
+% 		\textbf{\hspace{4mm} Height (m)} & \textbf{Angle (\textdegree)} & \textbf{Sin \bm{$\theta$}} & \textbf{Acceleration (m/s\textsuperscript{2})} \\
+% 		\hline
+% 		\textbf{Height \#1:} 0.1315m& 5.067\textdegree& 0.088& 0.459m/s\textsuperscript{2}\\
+% 		\textbf{Height \#2:} 0.2000m& 7.662\textdegree& 0.133& 0.763m/s\textsuperscript{2}\\
+% 		\textbf{Height \#3:} 0.2685m& 10.07\textdegree& 0.175& 1.087m/s\textsuperscript{2}\\
+% 		\textbf{Height \#4:} 0.3337m& 12.98\textdegree& 0.225& 1.58m/s\textsuperscript{2}\\
+% 		\textbf{Height \#5:} 0.4055m& 15.68\textdegree& 0.270& 1.78m/s\textsuperscript{2}\\
+% 		\hline
+% 	\end{tabular*}
+% \end{table}
 
 \end{document}
