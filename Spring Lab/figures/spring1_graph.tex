@@ -1,5 +1,5 @@
 \begin{figure}[H]
-	\caption{Spring 1: Force Vs. Displacement\label{figure1}}
+	\caption{Force Vs. Displacement for Spring One\label{figure1}}
 	\vspace{-4mm}
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -16,12 +16,12 @@
 				minor grid style = {lightgray!25},
 				width = \textwidth,
 				height = 0.5\textwidth,
-				xlabel = {Displacement (m)},
+				xlabel = {Displacement (cm)},
 				ylabel = {Force (N)},
 			]
 
 			\addplot[red, only marks] file[skip first] {./Data/spring1.dat};
-			\addplot [color=blue, domain=0:0.3, mark=none smooth, thick] {7.5563*x-0.2134};
+			\addplot [color=blue, domain=0:40, mark=none smooth, thick] {0.235*x+1.4};
 
 		\end{axis}
 	\end{tikzpicture}
