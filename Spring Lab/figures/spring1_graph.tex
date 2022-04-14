@@ -1,0 +1,28 @@
+\begin{figure}[H]
+	\caption{Force Vs. Displacement\label{figure1}}
+	\vspace{-4mm}
+	\begin{tikzpicture}
+		\begin{axis}[
+				xmin=0, xmax=40,
+				ymin=0, ymax=12,
+				xtick distance = 5,
+				ytick distance = 2,
+				xticklabel style={
+						/pgf/number format/precision=3,
+						/pgf/number format/fixed},
+				grid = both,
+				minor tick num = 1,
+				major grid style = {lightgray},
+				minor grid style = {lightgray!25},
+				width = \textwidth,
+				height = 0.5\textwidth,
+				xlabel = {Displacement (m)},
+				ylabel = {Force (N)},
+			]
+
+			\addplot[red, only marks] file[skip first] {./data/spring1.dat};
+			\addplot [color=blue, domain=0:0.3, mark=none smooth, thick] {7.5563*x-0.2134};
+
+		\end{axis}
+	\end{tikzpicture}
+\end{figure}
