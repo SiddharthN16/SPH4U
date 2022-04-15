@@ -1,11 +1,11 @@
 \begin{figure}[H]
-	\caption{Force Vs. Displacement for Spring One\label{figure1}}
+	\caption{Force Vs. Displacement for Spring A\label{figure1}}
 	\vspace{-4mm}
 	\begin{tikzpicture}
 		\begin{axis}[
-				xmin=0, xmax=40,
-				ymin=0, ymax=12,
-				xtick distance = 5,
+				xmin=0, xmax=50,
+				ymin=0, ymax=14,
+				xtick distance = 10,
 				ytick distance = 2,
 				xticklabel style={
 						/pgf/number format/precision=3,
@@ -15,13 +15,14 @@
 				major grid style = {lightgray},
 				minor grid style = {lightgray!25},
 				width = \textwidth,
-				height = 0.5\textwidth,
+				height = 0.43\textwidth,
 				xlabel = {Displacement (cm)},
 				ylabel = {Force (N)},
 			]
 
 			\addplot[red, only marks] file[skip first] {./Data/spring1.dat};
-			\addplot [color=blue, domain=0:40, mark=none smooth, thick] {0.235*x+1.4};
+			\addplot [color=blue, domain=0:50, mark=none smooth, thick] {0.2254*x+1.48};
+			\addplot [color=green, domain=0:50, mark=none smooth, thick] {4.3784*x+1.4449};
 
 		\end{axis}
 	\end{tikzpicture}

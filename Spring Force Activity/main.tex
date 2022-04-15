@@ -6,6 +6,7 @@
 \usepackage{gensymb}
 \usepackage{amssymb}
 \usepackage{xcolor}
+\usepackage{booktabs}
 \usepackage{rotating}
 \usepackage{fancyhdr}
 \usepackage{hyperref}
@@ -14,6 +15,7 @@
 \usepackage{float}
 \usepackage{caption}
 \usepackage{bm}
+\usepackage{enumitem}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
 \pgfplotsset{compat=newest}
@@ -26,7 +28,7 @@
 \captionsetup[table]{skip=0pt,singlelinecheck=off}
 \doublespacing 
 
-\geometry{top=0.75in, bottom=1in, left=1.0in, right=1.0in}
+\geometry{top=0.6in, bottom=0.75in, left=1.0in, right=1.0in}
 \renewcommand{\headrulewidth}{0pt} 
 \renewcommand{\footrulewidth}{0pt} 
 \setlength\headsep{0.333in}
@@ -39,13 +41,30 @@
 \maketitle
 \newpage
 \section{Observations}
-\input{./Figures/spring1_table.tex}
-\input{./Figures/spring2_table.tex}
-
-\newpage
+\input{./Figures/observations_table.tex}
+\vspace{-8mm}
+\section{Analysis}
+\vspace{-4mm}
 \input{./Figures/spring1_graph.tex}
 \input{./Figures/spring2_graph.tex}
 
+\newpage
 
+\begin{enumerate}[font=\bfseries]
+	\item \textbf{Calculating Slope of Each Graph:}
+	      \vspace{-4mm}
+	      \begin{enumerate}
+		      \item \underline{Spring A}\\
+		            The trendline's equation for Spring A is:~\bm{$y = 0.225x + 1.48$}\\
+		            $\therefore$ The slope of trendline is 0.225.
+		      \item \underline{Spring B}\\
+		            The trendline's equation for Spring B is:~\bm{$y = 4.38x + 1.44$}\\
+		            $\therefore$ The slope of trendline is 4.38.
+	      \end{enumerate}
+	\item \textbf{Relationship Between Force and Displacement:}\\
+	      There is a linear relationship between force and displacement, where force is directly proportional to displacement ($\vec{F} \propto \vec{\Delta d}$).
+	\item \textbf{Physical Quantity the Slope Represents:}\\
+	      The physical quantity the slope represents is the spring constant.
+\end{enumerate}
 
 \end{document}
