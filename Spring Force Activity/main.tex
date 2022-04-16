@@ -1,4 +1,5 @@
 \documentclass[12pt,letterpaper]{article}
+
 \newcommand\tab[1][1cm]{\hspace*{#1}}
 \usepackage[utf8]{inputenc}
 \usepackage[letterpaper]{geometry}
@@ -18,6 +19,22 @@
 \usepackage{enumitem}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
+
+\usepackage{physics}
+\usepackage{tikz}
+\usepackage{mathdots}
+\usepackage{yhmath}
+\usepackage{cancel}
+\usepackage{color}
+\usepackage{siunitx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{extarrows}
+\usetikzlibrary{fadings}
+\usetikzlibrary{patterns}
+\usetikzlibrary{shadows.blur}
+\usetikzlibrary{shapes}
 \pgfplotsset{compat=newest}
 
 \tolerance=1
@@ -70,5 +87,6 @@
 	      $\vec{F} = k\vec{\Delta d}$
 	\item \textbf{Properties of an "Ideal Spring":}
 \end{enumerate}
-
+\newpage
+\input{./Figures/setup_diagram.tex}
 \end{document}
