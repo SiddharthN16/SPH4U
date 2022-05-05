@@ -59,13 +59,13 @@
 \begin{document}
 \maketitle
 \newpage
-\section{Setup}
+\section{Experimental Setup}
 \input{./Figures/setup_diagram.tex}
 
 The figure above displays the setup used for the activity.
-To calculate displacement, first the length of the springs at equilibrium was measured and noted.
-Next, when masses were added to the springs, the length of the springs was measured with the ruler where only the length of the coil was measured and not including the rings.
-Lastly, to calculate displacement, the spring length at rest was subtracted from the measured spring length with masses.
+To calculate displacement, first the length of the springs at equilibrium were measured and noted.
+Next, when masses were added to the springs, the length of the springs were measured with the ruler where only the length of the coil was measured and not including the rings.
+Lastly, to calculate displacement, the spring length at equilibrium was subtracted from the stretched spring length.
 \section{Observations}
 \input{./Figures/observations_table.tex}
 \newpage
@@ -74,10 +74,12 @@ Lastly, to calculate displacement, the spring length at rest was subtracted from
 \vspace{-4mm}
 \input{./Figures/spring1_graph.tex}
 \vspace{-8mm}
-$\star$ The green line represents the trendline for Spring B
+\hspace{8mm}
+\textit{$\star$ Blue line represents Spring A and green line represents Spring B}
 \input{./Figures/spring2_graph.tex}
 \vspace{-8mm}
-$\star$ The green line represents the trendline for Spring A
+\hspace{1mm}
+\textit{$\star$ Blue line represents Spring B and green line represents Spring A}
 \begin{enumerate}[font=\bfseries]
 	\item \textbf{Calculating Slope of Each Graph:}
 	      \vspace{-4mm}
@@ -98,11 +100,19 @@ $\star$ The green line represents the trendline for Spring A
 	      This holds true because Spring B has a larger slope than Spring A, meaning it should be more stiff, evident through Spring B's smaller displacement values than Spring A.
 	\item \textbf{Equation of Line from Proportionality Statement:}\\
 	      Let $k$ represent the slope of the line.\\
-	      Let $x$ represent the displacement ($\Delta d$) of the spring from equilibrium.\\
-	      \bm{$F = kx$}
+	      Let $x$ represent the displacement ($\Delta d$) of the spring from equilibrium.
+	      \[
+		      \begin{aligned}
+			      F      & \propto x \\
+			      \bm{F} & = \bm{kx}
+		      \end{aligned}
+	      \]
 	\item \textbf{Properties of an "Ideal Spring":}\\
 	      The properties of an ideal spring are that it is frictionless and massless.
 	      Additionally, an ideal spring should obey Hooke's Law which states that the force exerted by the spring is proportional to the displacement of the spring from its relaxed position.
+	      The springs used in class for the activity are not examples of ideal springs as they have mass and friction to some degree.
+	      Also, the springs do not perfectly obey Hooke's Law as the data points are not perfectly linear or have the y-intercept of the trendline at $y=0$.
+	      Ideal springs exist in theory to simplify calculations while providing acceptable accuracy for practical problems.
 \end{enumerate}
 
 \end{document}

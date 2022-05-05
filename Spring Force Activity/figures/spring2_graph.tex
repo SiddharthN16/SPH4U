@@ -1,5 +1,5 @@
 \begin{figure}[H]
-	\caption{Force Vs. Displacement for Spring B\label{figure3}}
+	\caption{Force Vs. Displacement for Spring B\textsuperscript{$\star$}\label{figure3}}
 	\vspace{-4mm}
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -21,8 +21,8 @@
 			]
 
 			\addplot[red, only marks] file[skip first] {./Data/spring2.dat};
-			\addplot [color=blue, domain=0:3, mark=none smooth, thick] {4.3784*x+1.4449};
-			\addplot [color=dark-green, domain=0:3, mark=none smooth, thick] {0.2254*x+1.48};
+			\addplot [color=blue, domain=0:3, mark=none smooth, very thick] {4.3784*x+1.4449};
+			\addplot [color=dark-green, domain=0:3, mark=none smooth, ultra thick] {0.2254*x+1.48};
 
 		\end{axis}
 	\end{tikzpicture}
