@@ -1,9 +1,21 @@
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-\begin{table}[]
-	\begin{tabular}{@{}ccccc@{}}
-		Explosion & Total M before & Total M after & Total Ke before & Total Ke after \\
-		Expo1     & 0.000          & 0.444         & 0.000           & 0.183          \\
-		Expo2     & 0.000          & 0.524         & 0.000           & 0.189
-	\end{tabular}
+\begin{table}[htpb]
+	\caption{Observed Data for Cart 1 (Red) in Both Explosion Scenarios\label{explo_data1}}
+	\begin{tabular*}{\textwidth}{c@{\extracolsep{\fill}}cccccc}
+		\toprule
+		\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Explosion\\ Number\end{tabular}}} & \textbf{\begin{tabular}[c]{@{}c@{}}Cart 1 Mass\\ (kg)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Cart 1 $\bm{\vec{v}_{i}}$\\ (m/s)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Cart 1 $\bm{\vec{v}_{f}}$\\ (m/s)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Cart 1 $\bm{\vec{p}_{i}}$\\ (kg $\bigcdot$ m/s)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Cart 1 $\bm{\vec{p}_{f}}$\\ (kg $\bigcdot$ m/s)\end{tabular}} \\
+		\midrule
+		\textbf{Explosion 1}                                                                    & 0.270                                                               & 0.000                                                                                   & 0.796                                                                                   & 0.000                                                                                      & 0.215                                                                                      \\\addlinespace[2mm]
+		\textbf{Explosion 2}                                                                    & 0.270                                                               & 0.000                                                                                   & 0.945                                                                                   & 0.000                                                                                      & 0.255                                                                                      \\ \bottomrule
+	\end{tabular*}
+\end{table}
+
+\begin{table}[htpb]
+	\caption{Observed Data for Cart 2 (Blue) in Both Explosion Scenarios\label{explos_data2}}
+	\begin{tabular*}{\textwidth}{c@{\extracolsep{\fill}}cccccc}
+		\toprule
+		\multicolumn{1}{c}{\textbf{\begin{tabular}[c]{@{}c@{}}Collision\\ Number\end{tabular}}} & \textbf{\begin{tabular}[c]{@{}c@{}}Cart 2 Mass\\ (kg)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Cart 2 $\bm{\vec{v}_{i}}$\\ (m/s)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Cart 2 $\bm{\vec{v}_{f}}$\\ (m/s)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Cart 2 $\bm{\vec{p}_{i}}$\\ (kg $\bigcdot$ m/s)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Cart 2 $\bm{\vec{p}_{f}}$\\ (kg $\bigcdot$ m/s)\end{tabular}} \\
+		\midrule
+		\textbf{Explosion 1} & 0.270 & 0.000 & -0.848 & 0.000 & -0.229 \\\addlinespace[2mm]
+		\textbf{Explosion 2} & 0.532 & 0.000 & -0.506 & 0.000 & -0.269 \\ \bottomrule
+	\end{tabular*}
 \end{table}

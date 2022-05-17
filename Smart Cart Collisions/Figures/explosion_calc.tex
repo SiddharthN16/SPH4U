@@ -1,12 +1,10 @@
-% Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-\begin{table}[]
-	\begin{tabular}{@{}ccccccccccc@{}}
+\begin{table}[htpb]
+	\caption{Total Momentum and Kinetic Energy in Both Explosion Scenarios\label{explo_calc}}
+	\begin{tabular*}{\textwidth}{c@{\extracolsep{\fill}}ccccc}
 		\toprule
-		Explosion & Mass 1 & Mass 2 & Initial 1 & Initial 2 & Final 1 & Final 2 & Initial M 1 & Initial M 2 & Final M 1 & \cellcolor[HTML]{FFFFFF}Final M 2 \\ \midrule
-		Expo1     & 0.270  & 0.270  & 0.000     & 0.000     & 0.796   & 0.848   & 0.000       & 0.000       & 0.215     & 0.229                             \\
-		Expo2     & 0.270  & 0.532  & 0.000     & 0.000     & 0.945   & 0.506   & 0.000       & 0.000       & 0.255     & 0.269                             \\ \bottomrule
-	\end{tabular}
+		\textbf{\begin{tabular}[c]{@{}c@{}}Collision\\ Number\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Total $\bm{\vec{p}}$ Before\\ (kg $\bigcdot$ m/s)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Total $\bm{\vec{p}}$ After\\(kg $\bigcdot$ m/s)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Total $\bm{E_{k}}$\\ Before (J)\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Total $\bm{E_{k}}$\\ After (J)\end{tabular}} \\
+		\midrule
+		\textbf{Explosion 1}                                                & 0.000                   & -0.014                 & 0.000                    & 0.183                   \\\addlinespace[2mm]
+		\textbf{Explosion 2}                                                & 0.000                   & -0.014                 & 0.000                    & 0.189                   \\ \bottomrule
+	\end{tabular*}
 \end{table}
