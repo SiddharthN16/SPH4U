@@ -52,7 +52,7 @@
 \captionsetup[table]{skip=0pt,singlelinecheck=off}
 \doublespacing 
 
-\geometry{top=0.6in, bottom=0.75in, left=1.0in, right=1.0in}
+\geometry{top=0.6in, bottom=0.7in, left=1.0in, right=1.0in}
 \renewcommand{\headrulewidth}{0pt} 
 \renewcommand{\footrulewidth}{0pt} 
 \setlength\headsep{0.333in}
@@ -66,11 +66,28 @@
 \newpage
 
 \section{Collision Observations}
+\textbf{The Five Collision Scenarios:}
+\vspace{-4mm}
+\begin{enumerate}
+	\itemsep-0.75em
+	\item \textbf{Collision 1:} Both carts equal mass | Bounce of magnets | Cart 2 (Blue) at rest
+	\item \textbf{Collision 2:} Both carts equal mass | Bounce of magnets | Roll towards each other
+	\item \textbf{Collision 3:} $m_{2} = 2m_{1}$ | Bounce of magnets | Cart 2 (Blue) at rest
+	\item \textbf{Collision 4:} $m_{2} = 2m_{1}$ | Bounce of magnets | Roll towards each other
+	\item \textbf{Collision 5:} Both carts equal mass | Stick together after | Cart 2 (Blue) at rest
+\end{enumerate}
 \input{./Figures/collision_data.tex}
 \input{./Figures/collision_calc.tex}
 
 \newpage
 \section{Explosion Observations}
+\textbf{The Two Explosion Scenarios:}
+\vspace{-4mm}
+\begin{enumerate}
+	\itemsep-0.75em
+	\item \textbf{Explosion 1:} Two carts of equal mass “explode” away from each other
+	\item \textbf{Explosion 2:} Two carts of unequal mass “explode” away from each other
+\end{enumerate}
 \input{./Figures/explosion_data.tex}
 \input{./Figures/explosion_calc.tex}
 \end{document}
