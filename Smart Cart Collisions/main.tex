@@ -19,6 +19,7 @@
 \usepackage{enumitem}
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
+\usepackage[normalem]{ulem}
 
 \usepackage{physics}
 \usepackage{tikz}
@@ -38,6 +39,7 @@
 \usetikzlibrary{shadows.blur}
 \usetikzlibrary{shapes}
 \pgfplotsset{compat=newest}
+\newcommand{\sfrac}{\genfrac{}{}{}1}
 
 \makeatletter
 \newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
@@ -91,6 +93,84 @@
 \input{./Figures/explosion_data.tex}
 \input{./Figures/explosion_calc.tex}
 
+\section{Sample Calculations}
+\vspace{-4mm}
+\begin{minipage}[t]{0.3\textwidth}
+	\underline{Collision 1 \bm{$\vec{p}_{i}$} Calculation:}
+	\vspace{-8mm}
+	\[
+		\begin{aligned}
+			\vec{p}_{i} & = m\vec{v}_{i}                           \\[-8pt]
+			            & = 0.270(0.911)                           \\[-8pt]
+			\vec{p}_{i} & = 0.246~\text{kg $\bigcdot$ m/s [right]}
+		\end{aligned}
+	\]
+\end{minipage}%
+\hspace{0.5cm}
+\begin{minipage}[t]{0.3\textwidth}
+	\underline{Collision 2 \bm{$\Sigma \vec{p}_{i}$} Calculation:}
+	\vspace{-8mm}
+	\[
+		\begin{aligned}
+			\Sigma\vec{p}_{i} & = \vec{p}_{i_{1}} + \vec{p}_{i_{2}}     \\[-8pt]
+			                  & = m(v_{i_{1}} + v_{i_{2}})              \\[-8pt]
+			                  & = 0.270(0.455 - 0.476)                  \\[-8pt]
+			\Sigma\vec{p}_{i} & = 0.006~\text{kg $\bigcdot$ m/s [left]}
+		\end{aligned}
+	\]
+\end{minipage}%
+\hspace{0.5cm}
+\begin{minipage}[t]{0.3\textwidth}
+	\underline{Collision 2 \bm{$\Sigma E_{k_{i}}$} Calculation:}
+	\vspace{-8mm}
+	\[
+		\begin{aligned}
+			\Sigma E_{k_{i}} & = E_{k_{i_{1}}} + E_{k_{i_{2}}}            \\[-8pt]
+			                 & = \sfrac{1}{2}m(v_{i_{1}}^2 + v_{i_{2}}^2) \\[-8pt]
+			                 & = \sfrac{1}{2}0.270(0.455^2 + (-0.476)^2)  \\[-8pt]
+			\Sigma E_{k_{i}} & = 0.059~\text{J}
+		\end{aligned}
+	\]
+\end{minipage}%
+\vspace{4mm}
+\begin{minipage}[t]{0.3\textwidth}
+	\underline{Explosion 2 \bm{$\vec{p}_{f}$} Calculation:}
+	\vspace{-8mm}
+	\[
+		\begin{aligned}
+			\vec{p}_{f} & = m\vec{v}_{f}                          \\[-8pt]
+			            & = 0.532(-0.506)                         \\[-8pt]
+			\vec{p}_{f} & = 0.269~\text{kg $\bigcdot$ m/s [left]}
+		\end{aligned}
+	\]
+\end{minipage}%
+\hspace{0.5cm}
+\begin{minipage}[t]{0.3\textwidth}
+	\underline{Explosion 1 \bm{$\Sigma \vec{p}_{f}$} Calculation:}
+	\vspace{-8mm}
+	\[
+		\begin{aligned}
+			\Sigma\vec{p}_{f} & = \vec{p}_{f_{1}} + \vec{p}_{f_{2}}     \\[-8pt]
+			                  & = m(v_{f_{1}} + v_{f_{2}})              \\[-8pt]
+			                  & = 0.270(0.796 - 0.848)                  \\[-8pt]
+			\Sigma\vec{p}_{f} & = 0.014~\text{kg $\bigcdot$ m/s [left]}
+		\end{aligned}
+	\]
+\end{minipage}%
+\hspace{0.75cm}
+\begin{minipage}[t]{0.3\textwidth}
+	\underline{Explosion 1 \bm{$\Sigma E_{k_{f}}$} Calculation:}
+	\vspace{-8mm}
+	\[
+		\begin{aligned}
+			\Sigma E_{k_{f}} & = E_{k_{f_{1}}} + E_{k_{f_{2}}}            \\[-8pt]
+			                 & = \sfrac{1}{2}m(v_{f_{1}}^2 + v_{f_{2}}^2) \\[-8pt]
+			                 & = \sfrac{1}{2}0.270(0.796^2 + (-0.848)^2)  \\[-8pt]
+			\Sigma E_{k_{f}} & = 0.183~\text{J}
+		\end{aligned}
+	\]
+\end{minipage}%
+
 \section{Collision Analysis}
 \begin{enumerate}
 	\item \textbf{Explain if your results show momentum being conserved after each of the 5 collisions.}\\
@@ -107,10 +187,18 @@
 	\item \textbf{Clasify each of the 5 collisions as elastic or inelastic.}\\
 	      \underline{Collision 1:} The collision is elastic as both momentum and kinetic energy were mostly conserved.\\
 	      \underline{Collision 2:} The collision is elastic as both momentum and kinetic energy were mostly conserved.\\
-	      \underline{Collision 3:} The collision is elastic as both momentum and kinetic energy were mostly conserved.\\
-	      \underline{Collision 4:} The collision is inelastic as only momentum was conserved.\\
-	      \underline{Collision 5:} The collision is inelastic as only momentum was conserved.
-	\item \textbf{What general trend, patterns or special cases do you see in your data regarding momentum or kinetic energy.}
+	      \underline{Collision 3:} The collision is inelastic because the kinetic energy was not conserved, and is on the spectrum between elastic and inelastic collision. (Special case)\\
+	      \underline{Collision 4:} The collision is inelastic because the kinetic energy was not conserved, and is on the spectrum between elastic and inelastic collision. (Special case) \\
+	      \underline{Collision 5:} The collision is perfectly inelastic as only momentum was conserved and the carts stuck together after collision, sharing the same final velocity.
+	\item \textbf{What general trend, patterns or special cases do you see in your data regarding momentum or kinetic energy.}\\
+	      A general trend for momentum was that when the blue cart was initially at rest, the red cart came to a standstill ($\vec{v}_{f} = 0$), which also means that the red cart transferred most of its momentum to the blue cart.
+	      By theory this trend makes sense, because the blue cart starts at rest ($\vec{p}_{i} = 0$), which means for momentum to be conserved, the red cart must transfer all its momentum.
+	      The reason for any momentum losses/gains is explained in question 1.
+	      An observed trend for kinetic energy is that special cases of the collision being on the spectrum between elastic and inelastic only ocurred when using carts of different masses.
+	      In both of those collisions (Collision 3 \& 4), the kinetic energy went down, which signifies that by the addition of mass to the second cart, magnetic damping could be evident.
+	      The effect of the damping is that the kinetic energy is converted into heat energy during the collision through electric eddy currents.
+	      The reason this effect is less prevalent in the first two collisions is because both the carts had the same mass, energy was transferred more ``cleanly".
+	      Whereas with the blue cart having a greater mass (more inertia), the magnets get pushed closer, which makes it easier for the kinetic energy loss due to heat.
 \end{enumerate}
 
 \section{Explosion Analysis}
